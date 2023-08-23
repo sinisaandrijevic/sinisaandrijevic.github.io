@@ -696,7 +696,7 @@ li.selected {
 .slider {
   background: white;
   box-shadow: 0 10px 20px -5px rgba(0, 0, 0, .125);
-  height: 21rem;
+  height: 19.5rem;
   margin: auto;
   overflow: hidden;
   position: relative;
@@ -741,6 +741,7 @@ li.selected {
 
 @media (max-width: 767px) {
   .slider {
+    height: 22rem;
     .slide-track {
       width: calc(100% * 14);
     }
@@ -807,12 +808,6 @@ li.selected {
   margin-top: 3rem;
 }
 
-.footer__content__hiring {
-  text-decoration: none !important;
-  max-width: 20vw;
-  text-align: center;
-}
-
 .footer__content__address {
   text-decoration: none !important;
   text-align: center;
@@ -826,10 +821,23 @@ li.selected {
   text-decoration: none !important;
 }
 
+.footer__content__phone {
+  display: none;
+}
+
 @media screen and (max-width: 767px) {
-  .footer__content__hiring {
+  .footer__content__masha {
     display: none;
   }
+
+  .footer__content__phone {
+    display: block;
+  }
+
+  .footer__container {
+    row-gap: 1rem;
+  }
+
 }
 
 /*========== MEDIA QUERIES ==========*/
