@@ -696,7 +696,7 @@ li.selected {
 .slider {
   background: white;
   box-shadow: 0 10px 20px -5px rgba(0, 0, 0, .125);
-  height: 19.5rem;
+  height: 22.5rem;
   margin: auto;
   overflow: hidden;
   position: relative;
@@ -725,7 +725,7 @@ li.selected {
   .slide-track {
     animation: scroll 40s linear infinite;
     display: flex;
-    width: calc(250px * 14);
+    width: calc(250px * 9);
   }
 
   .slide {
@@ -777,6 +777,7 @@ li.selected {
 
 .footer__social {
   font-size: 1.5rem;
+  margin-left: 1rem;
   color: var(--title-color);
   margin-right: var(--mb-2);
 }

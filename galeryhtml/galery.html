@@ -20,24 +20,42 @@
 </head>
 
 <body>
+
+    <header class="l-header" id="header">
+        <nav class="nav bd-container">
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list">
+                    <li class="nav__item" id="nav__logo"><a href="#" class="nav__link active-link">Masha Learning | Galery</a></li>
+                    <li class="nav__item back" style="margin-left: 35vw;"><a href="../index.html" class="nav__link">Back</a></li>
+                </ul>
+            </div>
+            <div class="nav__toggle" id="nav-toggle">
+                <div style="display: flex; text-decoration: none; margin-top: 2vh;">
+                    <li class="nav__item"><a href="#home" class="nav__link">Masha Learning</a></li>
+                    <i class='bx bx-menu' style="margin-left: 70vw; margin-top: 1vh;"></i>
+                </div>
+            </div>
+        </nav>
+    </header>
+
     <div class="container-fluid pb-5 portfolio-text">
         <div class="row">
             <div class="col-md-7 offset-md-1 col-sm-12">
-                <h2 style="margin-top: -15vh;">
+                <h2 class="maintext">
                     Step into our restaurant's captivating gallery, where delectable dishes and heartwarming moments
                     come to
                     life.
                 </h2>
             </div>
         </div>
-        <div style="max-width: 25vw; margin-left: 65vw; margin-top: -10vh;">
+        <div class="return">
             <a href="../index.html">
                 <img src="../assets/img/Logo_M&B_Eng_rest_animaccord.png" alt="">
             </a>
         </div>
         <div class="row" style="margin-top: -20vh;">
             <div class="col-md-7 offset-md-1 col-sm-12">
-                <p class="pb-5 pt-5">
+                <p class="subtext">
                     Feast your eyes on artfully plated starters, sumptuous main courses, and enticing desserts, all
                     crafted by our talented chefs. Experience the inviting ambiance that sets the stage for
                     unforgettable
@@ -48,7 +66,7 @@
             </div>
         </div>
     </div>
-    <!-- End Portfolio-Text -->
+    <!-- End Header-Text -->
     <!-- Gallery -->
     <div class="scrollblock">
         <div class="container-fluid pt-10">
@@ -222,7 +240,7 @@
             </div>
             <div class="footer__content">
                 <div class="footer__content__masha">
-                    <a href="#" class="footer__logo" style="color: var(--first-color);">Masha and The Bear</a>
+                    <a href="#" class="footer__logo">Masha and The Bear</a>
                     <span class="footer__description">Themed Restaurant</span>
                     <div>
                         <a href="https://www.facebook.com/mashaandthebeardubai/" class="footer__social"><i
@@ -239,14 +257,25 @@
                     <h3 class="footer__title">Hiring</h3>
                     <p>Refer your friends to join Masha and The Bear family restaurant and experience a gastronomic
                         journey like no other! Together, let's create a dining experience that leaves a lasting
-                        impression on both our guests and those dear to you!</p>
+                        impression on both our guests and those dear to you!
+                    </p>
+                </div>
+            </div>
+            <div class="footer__content__phone">
+                <div>
+                    <a href="https://www.facebook.com/mashaandthebeardubai/" class="footer__social"><i
+                            class='fab fa-facebook'></i></a>
+                    <a href="https://www.instagram.com/mashaandthebear_rest/" class="footer__social"><i
+                            class='fab fa-instagram'></i></a>
+                    <a href="https://restaurant.mashabear.com/" class="footer__social"><i class='fas fa-globe'></i></a>
                 </div>
             </div>
         </div>
 
-        <p class="footer__copy">&#169; <a href="https://sinisaandrijevic.com"
-                style="color: var(--text-color-light); font-weight: bold; text-decoration: none !important;">Sinisa
-                Andrijevic.</a> All right reserved
+        <p class="footer__copy">
+            <a href="https://sinisaandrijevic.com"
+                style="color: var(--text-color-light); font-weight: bold; text-decoration: none !important;">&#169;
+                Sinisa Andrijevic</a> | All right reserved
         </p>
     </footer>
 
@@ -260,7 +289,7 @@
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
     <script src='https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js'></script>
     <script src="../assets/js/sop.js"></script>
-    
+
 </body>
 
 </html>
