@@ -26,9 +26,13 @@ a:visited .white {
 	color: #fff;
 }
 
+.nav__item.home {
+	display: none;
+}
+
 .return {
-	max-width: 25vw; 
-	margin-left: 65vw; 
+	max-width: 25vw;
+	margin-left: 65vw;
 	margin-top: -15vh;
 }
 
@@ -196,6 +200,15 @@ a:visited .white {
 
 @media screen and (max-width: 767px) {
 
+
+	.nav__item.home {
+		display: block;
+	}
+
+	.nav__item.back {
+		display: none;
+	}
+
 	.card-hover .reveal,
 	.card-hover:hover .reveal {
 		visibility: visible;
@@ -232,13 +245,13 @@ a:visited .white {
 
 	.maintext {
 		font-size: 1rem;
-		margin-top: -27vh;
+		margin-top: -25vh;
 	}
 
 	.subtext {
 		margin-top: 3rem;
 		font-size: 1rem;
-	}	
+	}
 
 	.portfolio-text p {
 		font-size: 1rem;
