@@ -14,7 +14,7 @@ body {
   background-image: url('../assets/img/menubg.jpg');
   background-position: center;
   background-size: cover;
-  background-attachment:fixed;
+  background-attachment: fixed;
   background-repeat: no-repeat;
 }
 
@@ -51,30 +51,35 @@ body {
 
 @media (min-width: 40rem) {
   .cards_item {
-    width: 100%; /* Update to 100% */
+    width: 100%;
+    /* Update to 100% */
   }
 }
 
 @media (min-width: 56rem) {
   .cards_item {
-    width: 100%; /* Update to 100% */
+    width: 100%;
+    /* Update to 100% */
   }
+
   .cards_item.second {
-    width: 100%; /* Update to 100% */
+    width: 100%;
+    /* Update to 100% */
   }
 }
 
 .card {
-width: 100%;
-height: 250px;
-background-image: linear-gradient(rgba(0, 0, 0, .45), rgba(0, 0, 0, .45));
-margin-bottom: 25px;
-margin-right: 12px;
-margin-top: 1.5rem;
-position: relative;
-.card_content {
-  padding: 0.1rem 0;
-}
+  width: 100%;
+  height: 250px;
+  background-image: linear-gradient(rgba(0, 0, 0, .45), rgba(0, 0, 0, .45));
+  margin-bottom: 25px;
+  margin-right: 12px;
+  margin-top: 1.5rem;
+  position: relative;
+
+  .card_content {
+    padding: 0.1rem 0;
+  }
 }
 
 /*
@@ -109,11 +114,21 @@ position: relative;
 }
 */
 
-.segmenttitle{
+.segmenttitle {
   color: #fff;
   margin-top: 61px;
   font-size: 50px;
   font-weight: 400;
+  display: flex;
+}
+
+h2 a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.segmenttitle h3 {
+  margin-left: 50vw;
 }
 
 .alergens {
@@ -134,10 +149,65 @@ position: relative;
 
 .card_text {
   margin-top: 16px;
-  font-size: 15px;  
+  font-size: 15px;
   color: #fff;
   padding-left: 10px;
   padding-right: 10px;
   font-style: normal;
   line-height: 15px;
+}
+
+.l-header {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: var(--z-fixed);
+  background-color: var(--body-color);
+}
+
+/* Phone */
+
+@media only screen and (max-width: 767px) {
+  .segmenttitle {
+    margin-left: 1rem;
+    margin-top: -2rem;
+
+  }
+
+  .alergens {
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+
+  .card_image img {
+    width: 90vw;
+  }
+
+  .card {
+    position: absolute;
+    max-width: 90vw;
+    margin-right: 0rem;
+    margin-bottom: 1.5rem;
+    max-height: 37.5vh;
+  }
+
+  .price_tag {
+    display: none;
+  }
+
+  .card_text .card_title {
+    font-size: 1.2rem;
+  }
+
+  .card_text .card_subtitle {
+    font-size: 1rem;
+    margin-bottom: 0;
+  }
+
+  .card_text p {
+    font-size: 1rem;
+    margin-bottom: 0;
+    margin-top: 0.5rem;
+  }
 }
