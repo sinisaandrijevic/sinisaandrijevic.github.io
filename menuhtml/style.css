@@ -131,7 +131,7 @@ h2 a {
   margin-left: 50vw;
 }
 
-.alergens {
+.allergens {
   flex-direction: column;
   margin-bottom: 25px;
   display: flex;
@@ -144,7 +144,7 @@ h2 a {
   margin-bottom: 15px;
   text-align: center;
   font-weight: 700;
-  line-height: 2rem;
+  line-height: 1rem;
 }
 
 .card_text {
@@ -175,7 +175,7 @@ h2 a {
 
   }
 
-  .alergens {
+  .allergens {
     margin-left: 1rem;
     margin-right: 1rem;
   }

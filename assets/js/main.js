@@ -1,22 +1,83 @@
+// List of valid users
+const validUsers = [
+    { username: 'Admin', password: 'root' },
+    { username: 'User', password: 'password' },
+];
+
+document.addEventListener('DOMContentLoaded', function () {
+    const isAuthenticated = sessionStorage.getItem('isAuthenticated');
+
+    if (isAuthenticated === 'true') {
+        document.getElementById('authModal').style.display = 'none';
+        enableScroll();
+    } else {
+        document.getElementById('authModal').style.display = 'flex';
+        disableDevTools();
+        disableScroll();
+    }
+});
+
+function authenticate(event) {
+    event.preventDefault();
+
+    var username = document.getElementById('username').value;
+    var password = document.getElementById('password').value;
+
+    const isValidUser = validUsers.some(user => user.username === username && user.password === password);
+
+    if (isValidUser) {
+        sessionStorage.setItem('isAuthenticated', 'true');
+        document.getElementById('authModal').style.display = 'none';
+        enableScroll();
+    } else {
+        alert('Invalid credentials. Please try again.');
+    }
+}
+
+function disableDevTools() {
+    document.addEventListener('contextmenu', function (e) {
+        e.preventDefault();
+    });
+
+    console.log = function () {
+        alert('Console is disabled during authentication.');
+    };
+
+    document.addEventListener('keydown', function (e) {
+        if ((e.ctrlKey || e.metaKey) && (e.key === 's')) {
+            e.preventDefault();
+            alert('Save is disabled for copyright purposes.');
+        }
+    });
+}
+
+function disableScroll() {
+    document.body.style.overflow = 'hidden';
+}
+
+function enableScroll() {
+    document.body.style.overflow = 'auto';
+}
+
 /*==================== SHOW MENU ====================*/
-const showMenu = (toggleId, navId) =>{
+const showMenu = (toggleId, navId) => {
     const toggle = document.getElementById(toggleId),
-    nav = document.getElementById(navId)
-    
+        nav = document.getElementById(navId)
+
     // Validate that variables exist
-    if(toggle && nav){
-        toggle.addEventListener('click', ()=>{
+    if (toggle && nav) {
+        toggle.addEventListener('click', () => {
             // We add the show-menu class to the div tag with the nav__menu class
             nav.classList.toggle('show-menu')
         })
     }
 }
-showMenu('nav-toggle','nav-menu')
+showMenu('nav-toggle', 'nav-menu')
 
 /*==================== REMOVE MENU MOBILE ====================*/
 const navLink = document.querySelectorAll('.nav__link')
 
-function linkAction(){
+function linkAction() {
     const navMenu = document.getElementById('nav-menu')
     // When we click on each nav__link, we remove the show-menu class
     navMenu.classList.remove('show-menu')
@@ -26,36 +87,36 @@ navLink.forEach(n => n.addEventListener('click', linkAction))
 /*==================== SCROLL SECTIONS ACTIVE LINK ====================*/
 const sections = document.querySelectorAll('section[id]')
 
-function scrollActive(){
+function scrollActive() {
     const scrollY = window.pageYOffset
 
-    sections.forEach(current =>{
+    sections.forEach(current => {
         const sectionHeight = current.offsetHeight
         const sectionTop = current.offsetTop - 50;
         sectionId = current.getAttribute('id')
 
-        if(scrollY > sectionTop && scrollY <= sectionTop + sectionHeight){
+        if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
             document.querySelector('.nav__menu a[href*=' + sectionId + ']').classList.add('active-link')
-        }else{
+        } else {
             document.querySelector('.nav__menu a[href*=' + sectionId + ']').classList.remove('active-link')
         }
     })
 }
 window.addEventListener('scroll', scrollActive)
 
-/*==================== CHANGE BACKGROUND HEADER ====================*/ 
-function scrollHeader(){
+/*==================== CHANGE BACKGROUND HEADER ====================*/
+function scrollHeader() {
     const nav = document.getElementById('header')
     // When the scroll is greater than 200 viewport height, add the scroll-header class to the header tag
-    if(this.scrollY >= 200) nav.classList.add('scroll-header'); else nav.classList.remove('scroll-header')
+    if (this.scrollY >= 200) nav.classList.add('scroll-header'); else nav.classList.remove('scroll-header')
 }
 window.addEventListener('scroll', scrollHeader)
 
-/*==================== SHOW SCROLL TOP ====================*/ 
-function scrollTop(){
+/*==================== SHOW SCROLL TOP ====================*/
+function scrollTop() {
     const scrollTop = document.getElementById('scroll-top');
     // When the scroll is higher than 560 viewport height, add the show-scroll class to the a tag with the scroll-top class
-    if(this.scrollY >= 560) scrollTop.classList.add('show-scroll'); else scrollTop.classList.remove('show-scroll')
+    if (this.scrollY >= 560) scrollTop.classList.add('show-scroll'); else scrollTop.classList.remove('show-scroll')
 }
 window.addEventListener('scroll', scrollTop)
 

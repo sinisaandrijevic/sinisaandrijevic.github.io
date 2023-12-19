@@ -225,6 +225,19 @@
         </div>
     </div>
 
+    <!-- Authentication Modal -->
+    <div id="authModal" class="modal">
+        <div class="modal-content">
+            <div class="masha-and-bear-container">
+                <form class="login" id="authForm" onsubmit="authenticate(event)">
+                    <input type="text" placeholder="Username" id="username" required>
+                    <input type="password" placeholder="Password" id="password" required>
+                    <button type="submit">Login</button>
+                  </form>
+            </div>
+        </div>
+    </div>
+
     <!--========== FOOTER ==========-->
     <footer class="footer section bd-container">
         <div class="footer__container bd-grid">
