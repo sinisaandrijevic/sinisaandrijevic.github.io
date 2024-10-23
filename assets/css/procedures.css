@@ -490,7 +490,7 @@ body.toggle .grid * {
 
 @media screen and (max-width: 767px) {
 
-  .sm *{
+  .sm * {
     max-width: 90vw;
   }
 
@@ -499,7 +499,7 @@ body.toggle .grid * {
     align-items: center;
   }
 
-  .phoneprocedures *{
+  .phoneprocedures * {
     max-width: 90vw;
     align-items: center;
   }
@@ -708,4 +708,16 @@ body #scene #right-zone {
   background: #fff;
   height: 100%;
   flex-grow: 3;
+  text-align: center;
+}
+
+body #scene #right-zone img {
+  display: block;
+  margin: 2rem auto -1rem;
+  margin: 2rem auto 0 18rem;
+  max-width: 20rem;
+}
+
+.hidden {
+  visibility: hidden;
 }

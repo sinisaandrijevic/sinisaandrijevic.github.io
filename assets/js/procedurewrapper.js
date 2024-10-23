@@ -42,3 +42,23 @@ selectBtn.addEventListener("mouseenter", () => {
 wrapperprocc.addEventListener("mouseleave", () => {
   wrapperprocc.classList.remove("active");
 });
+
+document.addEventListener('DOMContentLoaded', function () {
+  const listItems = document.querySelectorAll('.list .item');
+
+  listItems.forEach(function (item) {
+    item.addEventListener('click', function () {
+      const sectionId = item.closest('section').id;
+      const classicSopImg = document.querySelector('.classic_sop');
+      const barSopImg = document.querySelector('.bar_sop');
+
+      if (sectionId === 'procedures1') {
+        classicSopImg.classList.add('hidden');
+        barSopImg.classList.remove('hidden');
+      } else if (sectionId === 'procedures2') {
+        classicSopImg.classList.remove('hidden');
+        barSopImg.classList.add('hidden');
+      }
+    });
+  });
+});
